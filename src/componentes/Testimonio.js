@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 import '../hojas-de-estilo/Testimonio.css';
 
 function Testimonio(props) {
@@ -7,21 +6,18 @@ function Testimonio(props) {
     <div className='contenedor-testimonio'>
       <img
         className='imagen-testimonio'
-        src={props.imagen}
-        alt="Foto del estudiante"
-      />
+        src={require(`../imagenes/testimonio-${props.imagen}.png`)}
+        alt="Foto de Emma"/>
 
       <div className='contenedor-texto-testimonio'>
-        <p className='nombre-testimonio'>
-          {props.nombre} en {props.pais}
+        <p className="nombre-testimonio">
+          <strong>{props.nombre}</strong> en {props.pais}
         </p>
-
-        <p className='cargo-testimonio'>
-          {props.cargo} en {props.empresa}
+        <p className="cargo-testimonio">
+          {props.cargo} en <strong>{props.empresa}</strong>
         </p>
-
-        <p className='texto-testimonio'>
-          {props.testimonio}
+        <p className="texto-testimonio">
+          "{props.testimonio}"
         </p>
       </div>
     </div>
